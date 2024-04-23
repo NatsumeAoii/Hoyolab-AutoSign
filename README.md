@@ -4,8 +4,8 @@
 </h1>
 
 <p align="center">
-    <img src="https://img.shields.io/github/license/canaria3406/hoyolab-auto-sign?style=flat-square">
-    <img src="https://img.shields.io/github/stars/canaria3406/hoyolab-auto-sign?style=flat-square">
+    <img src="https://img.shields.io/github/license/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
+    <img src="https://img.shields.io/github/stars/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
     <br><a href="/README_zh-tw.md">繁體中文</a>　<b>English</b>　<a href="/README_ru-ru.md">Русский</a>
 </p>
 
@@ -20,10 +20,10 @@ Supports Genshin Impact, Honkai Impact 3rd, and Honkai: Star Rail. Support multi
 
 ## Setup
 1. Go to [Google Apps Script](https://script.google.com/home/start) and create a new project with your custom name.
-2. Select the editor and paste the code( [Discord version](https://github.com/canaria3406/hoyolab-auto-sign/blob/main/src/main-discord.gs) / [Telegram version](https://github.com/canaria3406/hoyolab-auto-sign/blob/main/src/main-telegram.gs) / [Experimental](https://github.com/NatsumeAoii/hoyolab-auto-sign/blob/main/src/main-disc_tele.gs) ). Refer to the instructions below to configure the config file and save it.
+2. Select the editor and paste the code( [Discord version](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord.gs) / [Telegram version](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-telegram.gs) / [Experimental](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-disc_tele.gs) ). Refer to the instructions below to configure the config file and save it.
 3. Select "main" and click the "Run" button at the top.
    
-   ![image](https://github.com/NatsumeAoii/hoyolab-auto-sign/blob/main/pic/E04.png)
+   ![image](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/pic/E04.png)
 4. Grant the necessary permissions and confirm that the configuration is correct (Execution started > completed).
 5. Click the `Trigger` button on the left side / left tab and add a new trigger on `Add Trigger` button at bottom right.  
    Select the function to run: main  
@@ -61,19 +61,19 @@ const profiles = [
    4, Go to the "Network" tab.
    4. Click on the "Preserve Log" / "Persist Logs" button.
       
-      ![image](https://github.com/NatsumeAoii/hoyolab-auto-sign/blob/main/pic/E05.png)  
+      ![image](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/pic/E05.png)  
    6. Refresh the page.
    7. Click on the getGameRecordCard request where the method is "GET" (it should be named "getGameRecordCard" with your HoYoLab UID).
       
-      ![image](https://github.com/NatsumeAoii/hoyolab-auto-sign/blob/main/pic/E06.png)  
+      ![image](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/pic/E06.png)  
    8. Go to the "Cookies" tab.
    9.  Copy the "account_mid_v2", "account_id_v2", "ltoken_v2", "ltmid_v2", and "ltuid_v2"
-      ![image](https://github.com/NatsumeAoii/hoyolab-auto-sign/blob/main/pic/E07.png)  
+      ![image](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/pic/E07.png)  
 
 </details>
 
 <details>
-<summary><b>Discord notification settings (only for <a href="https://github.com/canaria3406/hoyolab-auto-sign/blob/main/src/main-discord.gs">Discord version</a>)</b></summary>
+<summary><b>Discord notification settings (only for <a href="https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord.gs">Discord version</a>)</b></summary>
 
 ```javascript
 const discord_notify = true
@@ -102,7 +102,7 @@ const discordWebhook = "https://discord.com/api/webhooks/1050000000000000060/6aX
 </details>
 
 <details>
-<summary><b>Telegram notification settings (only for <a href="https://github.com/canaria3406/hoyolab-auto-sign/blob/main/src/main-telegram.gs">Telegram version</a>)</b></summary>
+<summary><b>Telegram notification settings (only for <a href="https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-telegram.gs">Telegram version</a>)</b></summary>
 
 ```javascript
 const telegram_notify = true
@@ -151,7 +151,7 @@ const discord_notify = true
 const myDiscordID = "240000800000300040"
 const discordWebhook = "https://discord.com/api/webhooks/10xxxxxxxxxxxxxxx60/6aXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXnB"
 ```
-![image](https://github.com/canaria3406/hoyolab-auto-sign/blob/main/pic/E02.png)
+![image](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/pic/E02.png)
 
 </details>
 
@@ -179,7 +179,7 @@ const telegram_notify = true
 const myTelegramID = "1XXXXXXX0"
 const telegramBotToken = "6XXXXXXXXX:AAAAAAAAAAXXXXXXXXXX8888888888Peko"
 ```
-![image](https://github.com/canaria3406/hoyolab-auto-sign/blob/main/pic/E03.png)
+![image](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/pic/E03.png)
 
 </details>
 
