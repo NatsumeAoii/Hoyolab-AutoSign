@@ -6,7 +6,7 @@
 <p align="center">
     <img src="https://img.shields.io/github/license/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
     <img src="https://img.shields.io/github/stars/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
-    <br><a href="/README_zh-ZH.md">繁体中文</a>　<b>日本語</b> <a href="/README_en.md">English</a>　<a href="/README_ru-RU.md">Русский</a>
+    <br><a href="/README_zh-ZH.md">繁体中文</a>    <b>日本語</b>    <a href="/README.md">English</a>    <a href="/README_ru-RU.md">Русский</a>
 </p>
 
 軽量、安全、無料で自動的にHoYoLABの日々のチェックイン報酬を収集するスクリプトです。  
