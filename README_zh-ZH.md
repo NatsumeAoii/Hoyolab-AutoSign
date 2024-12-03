@@ -6,7 +6,7 @@ a<h1 align="center">
 <p align="center">
     <img src="https://img.shields.io/github/license/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
     <img src="https://img.shields.io/github/stars/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
-    <br><b>繁体中文<b>　<a href="/README_jp-JP.md">日本語</a> <a href="/README.md">English</a>　<a href="/README_ru-RU.md">Русский</a>
+    <br><b>繁体中文<b>    <a href="/README_jp-JP.md">日本語</a>    <a href="/README.md">English</a>    <a href="/README_ru-RU.md">Русский</a>
 </p>
 
 一个轻量级、安全且免费的脚本，自动领取 HoYoLAB 每日签到奖励。  
