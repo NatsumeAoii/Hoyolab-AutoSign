@@ -6,7 +6,7 @@
 <p align="center">
     <img src="https://img.shields.io/github/license/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
     <img src="https://img.shields.io/github/stars/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
-    <br><a href="/README_zh-ZH.md">繁体中文<b>　<a href="/README_jp-JP.md">日本語</a> <a href="/README.md">English</a>　<b>Русский</b>
+    <br><a href="/README_zh-ZH.md">繁体中文<a>    <a href="/README_jp-JP.md">日本語</a>    <a href="/README.md">English</a>    <b>Русский</b>
 </p>
 
 Легкий, безопасный и бесплатный скрипт, который автоматически собирает ежедневные награды HoYoLAB.  
