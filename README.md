@@ -6,7 +6,7 @@
 <p align="center">
     <img src="https://img.shields.io/github/license/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
     <img src="https://img.shields.io/github/stars/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
-    <br><a href="/README_zh-tw.md">繁體中文</a>　<b>English</b>　<a href="/README_ru-ru.md">Русский</a>
+    <br><a href="/README_zh-ZH.md">繁體中文</a>　<b>English</b>　<a href="/README_ru-RU.md">Русский</a>
 </p>
 
 A lightweight, secure, and free script that automatically collect HoYoLAB daily check in rewards.  
@@ -20,7 +20,7 @@ Supports Genshin Impact, Honkai Impact 3rd, and Honkai: Star Rail. Support multi
 
 ## Setup
 1. Go to [Google Apps Script](https://script.google.com/home/start) and create a new project with your custom name.
-2. Select the editor and paste the code( [Discord version](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord.gs) / [Telegram version](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-telegram.gs) / [Experimental](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-disc_tele.gs) ). Refer to the instructions below to configure the config file and save it.
+2. Select the editor and paste the (  [Code](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-disc_tele.gs) ). Refer to the instructions below to configure the config file and save it.
 3. Select "main" and click the "Run" button at the top.
    
    ![image](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/pic/E04.png)
@@ -191,3 +191,4 @@ const telegramBotToken = "6XXXXXXXXX:AAAAAAAAAAXXXXXXXXXX8888888888Peko"
 - 2023-05-12: Added Telegram notify support ([#3](https://github.com/canaria3406/hoyolab-auto-sign/pull/3)).
 - 2023-05-13: Added support for multiple HoYoLAB accounts ([#4](https://github.com/canaria3406/hoyolab-auto-sign/pull/4)).
 - 2024-02-02: Improved readability, maintainability and added an experimental version which have discord and telegram notification in 1 code.
+- 2024-12-03: Added support for Tears of Themis and Zenless Zone Zero, also added language specific for some country.
