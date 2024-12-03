@@ -1,8 +1,0 @@
-- 2022-12-30: Project launched.
-- 2023-04-27: Added support for Honkai Impact 3rd, and Honkai: Star Rail.
-- 2023-04-27: Added switch for Discord notify.
-- 2023-05-12: Updated get token process ([#2](https://github.com/canaria3406/hoyolab-auto-sign/pull/2)).
-- 2023-05-12: Added Telegram notify support ([#3](https://github.com/canaria3406/hoyolab-auto-sign/pull/3)).
-- 2023-05-13: Added support for multiple HoYoLAB accounts ([#4](https://github.com/canaria3406/hoyolab-auto-sign/pull/4)).
-- 2024-02-02: Improved readability, maintainability and added an experimental version which have discord and telegram notification in 1 code.
-- 2024-12-03: Added support for Tears of Themis and Zenless Zone Zero, also added language specific for some country.
