@@ -6,7 +6,7 @@
 <p align="center">
     <img src="https://img.shields.io/github/license/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
     <img src="https://img.shields.io/github/stars/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
-    <br><a href="/README_zh-ZH.md">繁體中文</a>　<b>English</b>　<a href="/README_ru-RU.md">Русский</a>
+    <br><a href="/README_zh-ZH.md">繁体中文<a>　<a href="/README_jp-JP.md">日本語</a> <b>English</b>　<a href="/README_ru-RU.md">Русский</a>
 </p>
 
 A lightweight, secure, and free script that automatically collect HoYoLAB daily check in rewards.  
@@ -20,7 +20,7 @@ Supports Genshin Impact, Honkai Impact 3rd, and Honkai: Star Rail. Support multi
 
 ## Setup
 1. Go to [Google Apps Script](https://script.google.com/home/start) and create a new project with your custom name.
-2. Select the editor and paste the (  [Code](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-disc_tele.gs) ). Refer to the instructions below to configure the config file and save it.
+2. Select the editor and paste the code [English ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-enEN.gs) / [Chinese ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-zhZH.gs) / [Russia ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-ruRU.gs) / [Japan ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-jpJP.gs) / [Indonesia ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-idID.gs). Refer to the instructions below to configure the config file and save it.
 3. Select "main" and click the "Run" button at the top.
    
    ![image](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/pic/E04.png)

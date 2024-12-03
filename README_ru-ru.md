@@ -6,7 +6,7 @@
 <p align="center">
     <img src="https://img.shields.io/github/license/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
     <img src="https://img.shields.io/github/stars/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
-    <br><a href="/README_zh-ZH.md">繁體中文</a>　<a href="/README_en.md">English</a>　<b>Русский</b>
+    <br><a href="/README_zh-ZH.md">繁体中文<b>　<a href="/README_jp-JP.md">日本語</a> <a href="/README.md">English</a>　<b>Русский</b>
 </p>
 
 Легкий, безопасный и бесплатный скрипт, который автоматически собирает ежедневные награды HoYoLAB.  
@@ -20,7 +20,7 @@
 
 ## Настройка
 1. Перейдите на [Google Apps Script](https://script.google.com/home/start) и создайте новый проект с произвольным именем.
-2. Выберите редактор и вставьте [код](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-disc_tele.gs). Ознакомьтесь с инструкцией ниже для настройки файла конфигурации и сохраните его.
+2. Выберите редактор и вставьте код [English ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-enEN.gs) / [Chinese ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-zhZH.gs) / [Russia ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-ruRU.gs) / [Japan ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-jpJP.gs) / [Indonesia ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-idID.gs). Ознакомьтесь с инструкцией ниже для настройки файла конфигурации и сохраните его.
 3. Выберите функцию "main" и нажмите кнопку "Выполнить" сверху.  
    
    ![image](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/pic/E04.png)

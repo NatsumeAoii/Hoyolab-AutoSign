@@ -1,4 +1,4 @@
-<h1 align="center">
+a<h1 align="center">
     <img width="150" height="150" src="pic/logo.svg" alt=""><br>
     Hoyolab-Auto-SignIn
 </h1>
@@ -6,7 +6,7 @@
 <p align="center">
     <img src="https://img.shields.io/github/license/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
     <img src="https://img.shields.io/github/stars/NatsumeAoii/hoyolab-auto-sign?style=flat-square">
-    <br><a href="/README_zh-tw.md">繁體中文</a>　<b>English</b>　<a href="/README_ru-RU.md">Русский</a>
+    <br><b>繁体中文<b>　<a href="/README_jp-JP.md">日本語</a> <a href="/README.md">English</a>　<a href="/README_ru-RU.md">Русский</a>
 </p>
 
 一个轻量级、安全且免费的脚本，自动领取 HoYoLAB 每日签到奖励。  
@@ -20,7 +20,7 @@
 
 ## 设置
 1. 进入 [Google Apps Script](https://script.google.com/home/start)，创建一个新项目并命名。
-2. 选择编辑器，粘贴 ([代码](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-disc_tele.gs)) 。根据下方指示配置并保存。
+2. 选择编辑器，粘贴 代码 [English ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-enEN.gs) / [Chinese ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-zhZH.gs) / [Russia ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-ruRU.gs) / [Japan ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-jpJP.gs) / [Indonesia ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-idID.gs) 。根据下方指示配置并保存。
 3. 选择“main”，点击顶部“运行”按钮。
    
    ![image](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/pic/E04.png)
