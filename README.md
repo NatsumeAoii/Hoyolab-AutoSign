@@ -47,10 +47,6 @@ const profiles = [
 
 > HoYoLAB has changed the rules for tokens on July 2023, switching from the previous "ltoken" and "ltuid" to "ltoken_v2" and "ltuid_v2".  
 
-> [!IMPORTANT]
-> HoYoLAB has changed the cookie to HttpOnly cookie. It is no longer possible to read the cookies by using the getToken.js code.  
-> Please use the method of manually copying the cookie to obtain the account_mid_v2, account_id_v2, ltoken_v2, ltmid_v2, and ltuid_v2.
-
 <details>
 <summary><b>HoYoLAB cookie settings</b></summary>
 
@@ -73,7 +69,7 @@ const profiles = [
 </details>
 
 <details>
-<summary><b>Discord notification settings (only for <a href="https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord.gs">Discord version</a>)</b></summary>
+<summary><b>Discord notification settings</b></summary>
 
 ```javascript
 const discord_notify = true
@@ -102,7 +98,7 @@ const discordWebhook = "https://discord.com/api/webhooks/1050000000000000060/6aX
 </details>
 
 <details>
-<summary><b>Telegram notification settings (only for <a href="https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-telegram.gs">Telegram version</a>)</b></summary>
+<summary><b>Telegram notification settings </b></summary>
 
 ```javascript
 const telegram_notify = true
@@ -129,7 +125,7 @@ const telegramBotToken = "6XXXXXXXXX:AAAAAAAAAAXXXXXXXXXX8888888888Peko"
 
 </details>
 
-## Demo
+## Demo (buggy)
 If the auto check in process is success, it will send "OK".  
 If you have already check in today, it will send "Traveler/Trailblazer/Captain, you've already checked in today"  
 
