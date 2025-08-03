@@ -12,15 +12,36 @@
 A lightweight, secure, and free script that automatically collect HoYoLAB daily check in rewards.  
 Supports Genshin Impact, Honkai Impact 3rd, and Honkai: Star Rail. Support multiple accounts.
 
+-----
+
 ## Features
-* **Lightweight** - The script only requires minimal configuration and it's only around 110 lines of code.
-* **Secure** - The script can be self-deployed to Google Apps Script, no worries about data leaks.
-* **Free** - Google Apps Script is currently a free service.
-* **Simple** - The script can run without a browser and will automatically notify you through Discord or Telegram.
+
+  * **Multi-Version Support**: Choose the version that best fits your needs:
+      * **Light**: Blazing fast and efficient, perfect for most users.
+      * **Original**: Simple and straightforward, ideal for beginners.
+      * **Robust**: Packed with advanced features like caching, request retries, and performance monitoring for maximum reliability.
+  * **Secure**: Self-deploy to Google Apps Script. Your credentials stay with you.
+  * **Free**: Runs entirely on the free tier of Google Apps Script.
+  * **Convenient**: Runs automatically in the cloud and sends notifications to Discord or Telegram.
+
+-----
+
+## Which Version to Choose?
+
+| Feature | Light Version | Original Version | Robust Version |
+| :--- | :---: | :---: | :---: |
+| **Best for...** | Most users, speed | Beginners, simplicity | Power users, reliability |
+| **Performance** | 🚀 High (Parallel) | ✅ Good (Sequential) | ✨ High (Sequential) |
+| **Key Features** | Efficient, modern | Easy to read | Caching, Retries, Monitoring |
+| **Configuration** | Single `CONFIG` object | Separate variables | Advanced `AppConfig` object |
+| **Average time (in s)** | 0.5s - 3s | 3s - 5s | 4s - 6s |
+| **Code length** | 250~ | 150~ | 900~ |
+
+-----
 
 ## Setup
 1. Go to [Google Apps Script](https://script.google.com/home/start) and create a new project with your custom name.
-2. Select the editor and paste the code [English ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-enEN.gs) / [Chinese ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-zhZH.gs) / [Russia ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-ruRU.gs) / [Japan ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-jpJP.gs) / [Indonesia ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/main-discord-telegram-idID.gs). Refer to the instructions below to configure the config file and save it.
+2. Select the editor and paste the code [English ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/English/) / [Chinese ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/Chinese/) / [Russia ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/Russian/) / [Japan ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/Japanese/) / [Indonesia ver](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/src/Indonesian/). Refer to the instructions below to configure the config file and save it.
 3. Select "main" and click the "Run" button at the top.
    
    ![image](https://github.com/NatsumeAoii/Hoyolab-AutoSign/blob/main/pic/E04.png)
@@ -30,6 +51,8 @@ Supports Genshin Impact, Honkai Impact 3rd, and Honkai: Star Rail. Support multi
    Select the event source: Time-driven  
    Select the type of time based trigger: Day timer  
    Select the time of day: recommended to choose any off-peak time between 09:00 to 15:00 or 09:00 AM to 03:00 PM.
+
+-----
 
 ## Configuration
 
@@ -125,6 +148,8 @@ const telegramBotToken = "6XXXXXXXXX:AAAAAAAAAAXXXXXXXXXX8888888888Peko"
 
 </details>
 
+-----
+
 ## Demo (buggy)
 If the auto check in process is success, it will send "OK".  
 If you have already check in today, it will send "Traveler/Trailblazer/Captain, you've already checked in today"  
@@ -179,12 +204,16 @@ const telegramBotToken = "6XXXXXXXXX:AAAAAAAAAAXXXXXXXXXX8888888888Peko"
 
 </details>
 
+-----
+
 ## Changelog
-- 2022-12-30: Project launched.
-- 2023-04-27: Added support for Honkai Impact 3rd, and Honkai: Star Rail.
-- 2023-04-27: Added switch for Discord notify.
-- 2023-05-12: Updated get token process ([#2](https://github.com/canaria3406/hoyolab-auto-sign/pull/2)).
-- 2023-05-12: Added Telegram notify support ([#3](https://github.com/canaria3406/hoyolab-auto-sign/pull/3)).
-- 2023-05-13: Added support for multiple HoYoLAB accounts ([#4](https://github.com/canaria3406/hoyolab-auto-sign/pull/4)).
-- 2024-02-02: Improved readability, maintainability and added an experimental version which have discord and telegram notification in 1 code.
-- 2024-12-03: Added support for Tears of Themis and Zenless Zone Zero, also added language specific for some country.
+
+  * **2025-08-01**: Major refactor into **Light**, **Original**, and **Robust** versions. Improved code structure, performance, and added advanced features like caching and retries (Robust version).
+  * **2024-12-03**: Added support for Tears of Themis and Zenless Zone Zero. Added language-specific code files.
+  * **2024-02-02**: Improved readability and maintainability.
+  * **2023-05-13**: Added support for multiple HoYoLAB accounts.
+  * **2023-05-12**: Added Telegram notification support.
+  * **2023-04-27**: Added support for Honkai Impact 3rd and Honkai: Star Rail.
+  * **2022-12-30**: Project launched.
+
+-----

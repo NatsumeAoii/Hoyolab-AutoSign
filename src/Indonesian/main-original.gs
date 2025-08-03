@@ -1,3 +1,12 @@
+/**
+ * @file Skrip Check-In Otomatis Hoyolab untuk Google Apps Script
+ * @version 6.0.0 devs
+ * @author NatsumeAoii, Canaria (Original)
+ * @license MIT
+ * @original link canaria https://github.com/canaria3406/hoyolab-auto-sign
+ * @see {@link https://github.com/NatsumeAoii/Hoyolab-AutoSign} Repositori asli
+ */
+
 const log = message => Logger.log(message);
 
 const profiles = [{
@@ -7,7 +16,7 @@ const profiles = [{
     honkai_3: true,
     tears_of_themis: false,
     zenless_zone_zero: false,
-    accountName: "あなたの名前"
+    accountName: "Nama Anda"
 }];
 
 const notificationConfig = {
@@ -31,38 +40,38 @@ const urls = {
 };
 
 const fetchUrls = async (urls, token) => {
-    log(`HTTPリクエストを開始`);
+    log(`Memulai permintaan HTTP`);
     try {
         const responses = await Promise.all(urls.map(url => UrlFetchApp.fetch(url, { method: 'POST', headers: { Cookie: token }, muteHttpExceptions: true })));
-        log(`HTTPリクエスト完了`);
+        log(`Permintaan HTTP selesai`);
         return responses.map(response => {
             const content = response.getContentText();
             try {
                 return JSON.parse(content).message;
             } catch (error) {
-                log(`レスポンスの解析中にエラーが発生しました: ${error}`);
-                return "レスポンス解析エラー";
+                log(`Error saat mengurai respons: ${error}`);
+                return "Error saat mengurai respons";
             }
         });
     } catch (error) {
-        log(`HTTPリクエスト中にエラーが発生しました: ${error}`);
-        return Array(urls.length).fill("HTTPリクエストエラー");
+        log(`Terjadi error saat melakukan permintaan HTTP: ${error}`);
+        return Array(urls.length).fill("Terjadi error saat melakukan permintaan HTTP");
     }
 };
 
 const notify = async (message) => {
     if (notificationConfig.discord.notify && notificationConfig.discord.webhook) {
-        const discordPayload = JSON.stringify({ 'username': 'Hoyolab-自動チェックイン', 'avatar_url': 'https://i.imgur.com/LI1D4hP.png', 'content': message });
+        const discordPayload = JSON.stringify({ 'username': 'Hoyolab-AutoCheck-In', 'avatar_url': 'https://i.imgur.com/LI1D4hP.png', 'content': message });
         const discordOptions = { method: 'POST', contentType: 'application/json', payload: discordPayload, muteHttpExceptions: true };
 
         try {
             await UrlFetchApp.fetch(notificationConfig.discord.webhook, discordOptions);
-            log(`Discord通知を送信しました`);
+            log(`Pemberitahuan Discord terkirim`);
         } catch (error) {
-            log(`Discordへのメッセージ送信中にエラーが発生しました: ${error}`);
+            log(`Terjadi error saat mengirim pesan ke Discord: ${error}`);
         }
     } else {
-        log(`Discord通知が送信されませんでした: 設定が不足しているか無効です`);
+        log(`Pemberitahuan Discord tidak terkirim: Pengaturan tidak ada atau dinonaktifkan`);
     }
     
     if (notificationConfig.telegram.notify && notificationConfig.telegram.botToken && notificationConfig.telegram.chatID) {
@@ -71,64 +80,64 @@ const notify = async (message) => {
 
         try {
             await UrlFetchApp.fetch(`https://api.telegram.org/bot${notificationConfig.telegram.botToken}/sendMessage`, telegramOptions);
-            log(`Telegram通知を送信しました`);
+            log(`Pemberitahuan Telegram terkirim`);
         } catch (error) {
-            log(`Telegramへのメッセージ送信中にエラーが発生しました: ${error}`);
+            log(`Terjadi error saat mengirim pesan ke Telegram: ${error}`);
         }
     } else {
-        log(`Telegram通知が送信されませんでした: 設定が不足しているか無効です`);
+        log(`Pemberitahuan Telegram tidak terkirim: Pengaturan tidak ada atau dinonaktifkan`);
     }
 };
 
 const main = async () => {
     const startTime = new Date().getTime();
-    log(`メイン関数を開始`);
+    log(`Memulai fungsi utama`);
 
     const responseMessages = {
-        "character info not found": "アカウントが見つかりません。",
-        "活動已結束": "イベントは終了しました。",
-        "-500012": "アカウントが見つかりません！",
-        "already checked in today": "既にチェックイン済み！",
-        "already signed in": "既にチェックイン済み！",
-        "not logged in": "Cookieに問題があります！",
-        "please log in to take part in the event": "Cookieに問題があります！"
+        "character info not found": "Akun tidak ditemukan.",
+        "活动已结束": "Acara sudah selesai.",
+        "-500012": "Akun tidak ditemukan!",
+        "already checked in today": "Sudah masuk hari ini!",
+        "already signed in": "Sudah masuk!",
+        "not logged in": "Masalah dengan cookie!",
+        "please log in to take part in the event": "Masalah dengan cookie!"
     };
 
     const results = [];
     for (const profile of profiles) {
-        log(`アカウントを処理中: ${profile.accountName}`);
+        log(`Memproses profil: ${profile.accountName}`);
         const urlsToCheck = [];
         const gameNames = [];
 
-        if (profile.genshin) { urlsToCheck.push(urls.genshin); gameNames.push("原神"); }
-        if (profile.honkai_star_rail) { urlsToCheck.push(urls.starRail); gameNames.push("崩壊：スターレール"); }
-        if (profile.honkai_3) { urlsToCheck.push(urls.honkai3); gameNames.push("崩壊3"); }
-        if (profile.tears_of_themis) { urlsToCheck.push(urls.tearsOfThemis); gameNames.push("未定事件簿"); }
-        if (profile.zenless_zone_zero) { urlsToCheck.push(urls.zenlessZoneZero); gameNames.push("ゼンレスゾーンゼロ"); }
+        if (profile.genshin) { urlsToCheck.push(urls.genshin); gameNames.push("Genshin Impact"); }
+        if (profile.honkai_star_rail) { urlsToCheck.push(urls.starRail); gameNames.push("Honkai Star Rail"); }
+        if (profile.honkai_3) { urlsToCheck.push(urls.honkai3); gameNames.push("Honkai Impact 3"); }
+        if (profile.tears_of_themis) { urlsToCheck.push(urls.tearsOfThemis); gameNames.push("Tears of Themis"); }
+        if (profile.zenless_zone_zero) { urlsToCheck.push(urls.zenlessZoneZero); gameNames.push("Zenless Zone Zero"); }
 
         const responses = await fetchUrls(urlsToCheck, profile.token);
 
         const profileResult = gameNames.map((name, index) => {
             const response = responses[index].toLowerCase();
 
-            // 既知のメッセージと照らし合わせる
+            // Memeriksa respons terhadap pesan yang sudah dikenal
             for (const [key, message] of Object.entries(responseMessages)) {
                 if (response.includes(key)) {
                     return `${name}: ${message}`;
                 }
             }
 
-            // 未知の応答の場合
-            return `${name}: 未知の応答: ${responses[index]}`;
+            // Kasus default untuk respons yang tidak dikenal
+            return `${name}: Respons tidak dikenal: ${responses[index]}`;
         }).join("\n");
 
-        results.push(`チェックイン完了: ${profile.accountName}\n${profileResult}`);
+        results.push(`Check-in selesai untuk : ${profile.accountName}\n${profileResult}`);
     }
 
     const message = results.join('\n\n');
     await notify(message);
 
     const endTime = new Date().getTime();
-    const executionTime = (endTime - startTime) / 1000; // ミリ秒を秒に変換
-    log(`メイン関数が終了しました。実行時間: ${executionTime} 秒`);
+    const executionTime = (endTime - startTime) / 1000; // Mengubah milidetik menjadi detik
+    log(`Fungsi utama selesai. Waktu eksekusi: ${executionTime} detik`);
 };
